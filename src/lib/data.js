@@ -1,0 +1,85 @@
+export const INSTRUMENTS = [
+  {
+    id: 'nifty50',
+    name: 'Nifty 50 Index Fund',
+    type: 'Mutual fund',
+    risk: 'moderate',
+    ret1y: 13.2,
+    ret5y: 14.8,
+    minAmount: 100,
+    plain: "Owns a tiny slice of India's 50 biggest companies. If India Inc does well, so do you.",
+    starter: true,
+  },
+  {
+    id: 'liquid',
+    name: 'Liquid Fund',
+    type: 'Mutual fund',
+    risk: 'low',
+    ret1y: 7.1,
+    ret5y: 6.2,
+    minAmount: 10,
+    plain: 'Basically a savings account that pays a bit more. Good parking spot for your buffer.',
+    starter: true,
+  },
+  {
+    id: 'flexicap',
+    name: 'Flexi Cap Fund',
+    type: 'Mutual fund',
+    risk: 'moderate',
+    ret1y: 16.4,
+    ret5y: 17.1,
+    minAmount: 100,
+    plain: 'A fund manager picks big, mid and small companies for you. More flexible, slightly more risk.',
+  },
+  {
+    id: 'gold',
+    name: 'Gold ETF',
+    type: 'ETF',
+    risk: 'moderate',
+    ret1y: 18.9,
+    ret5y: 13.5,
+    minAmount: 50,
+    plain: "Digital gold without the locker. Tends to hold up when stocks don't.",
+  },
+  {
+    id: 'smallcap',
+    name: 'Small Cap Fund',
+    type: 'Mutual fund',
+    risk: 'high',
+    ret1y: 24.7,
+    ret5y: 22.3,
+    minAmount: 100,
+    plain: 'Small, fast-growing companies. Big upside, big mood swings. Think 5+ years.',
+  },
+  {
+    id: 'zomato',
+    name: 'Eternal (Zomato)',
+    type: 'Stock',
+    risk: 'very high',
+    ret1y: 31.5,
+    ret5y: null,
+    minAmount: 250,
+    plain: "One company. You know the app, but knowing the app isn't the same as knowing the business.",
+  },
+  {
+    id: 'tata',
+    name: 'Tata Motors',
+    type: 'Stock',
+    risk: 'very high',
+    ret1y: -12.4,
+    ret5y: 38.2,
+    minAmount: 700,
+    plain: 'Single stock, cyclical business. Auto sales go up and down with the economy.',
+  },
+];
+
+export const RISK_META = {
+  low: { label: 'Low risk', color: '#00b386' },
+  moderate: { label: 'Moderate', color: '#5367ff' },
+  high: { label: 'High risk', color: '#f5a623' },
+  'very high': { label: 'Very high', color: '#eb5b3c' },
+};
+
+export function getInstrument(id) {
+  return INSTRUMENTS.find((i) => i.id === id);
+}
