@@ -1,7 +1,5 @@
 # Prompts
 
-**Tool:** Cursor (agent mode), producing a React 18 + Vite app deployed on Vercel.
-
 **Approach:** one system prompt sets the product context and the rules that apply everywhere. Each feature then gets its own task prompt with the same structure: **context → task → requirements → constraints → output → acceptance criteria**. Requirements are written as testable rules, not vibes, so every prompt maps to an eval in [`EVALS.md`](./EVALS.md).
 
 | # | Prompt | Output | Eval coverage |
